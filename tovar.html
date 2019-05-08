@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__top">
+          <div class="container">
+            <div class="top-header">
+              <ul class="top-menu">
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Доставка</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Оплата</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Помощь</a>
+                </li>
+              </ul>
+              <div class="header-services">
+                <ul class="header-services__menu">
+                  <li>
+                    <a href="#">Регистрация</a>
+                  </li>
+                  <li>
+                    <a href="#">Вход</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__main">
+          <div class="container">
+            <div class="main-header">
+              <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
+
+              <div class="main-header__category dropdown">
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
+                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                </ul>
+              </div>
+
+              <div class="main-header__search">
+                <form class="search-form">
+                  <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                  <label class="field-select search-form__select">
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id="" name="">
+                        <option>Категории поиска</option>
+                        <option>Значение 1</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <button type="submit" class="search-form__btn"></button>
+                </form>
+              </div>
+              <div class="main-header__btn">
+                <a class="btn" href="#">Разместить лот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__nav">
+          <div class="container">
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Техника
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Одежда
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Для дома
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Автотовары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Красота
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Здоровье
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Спортивные товары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Сад
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Скидки
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Мода
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Гараж
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main" class="layout layout-product">
+        <div class="layout-product__inner">
+          <div class="layout-product__photo">
+            <img src="img/product-img-01.jpg" alt="">
+          </div>
+          <div class="layout-product__main">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Литые диски R17 для toyota Land Cruiser 100/200</a></li>
+            </ul>
+            <h1 class="layout-product__title">Range Rover 2018 года</h1>
+            <p class="layout-product__lott-num">Лот №12135287</p>
+            <div class="layout-product__price">
+              <h5 class="layout-product__price-title">Цена</h5>
+              <div class="layout-product__price-box">
+                <div class="layout-product__price-box-val">15&nbsp;800&nbsp;<span>руб.</span></div>
+                <div class="layout-product__price-box-btn">
+                  <a class="btn" href="#">Купить сейчас</a>
+                </div>
+              </div>
+            </div>
+            <div class="layout-product__info">
+              <p><svg width="14" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time-icon"></use></svg>&nbsp;<span>12 дней</span> до конца торгов (23.01.2018 15:43)</p>
+              <p><svg width="12" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-icon"></use></svg>&nbsp;<span>Москва</span></p>
+            </div>
+            <div class="checkout-seller">
+              <div class="checkout-seller__inner">
+                <div class="checkout-seller__info">
+                  <a href="#" class="checkout-seller__img-wrap">
+                    <img class="checkout-seller__img" src="img/seller-card-demo-img.jpg" width="67" height="67" alt="SergyFill">
+                  </a>
+                  <div class="checkout-seller__body">
+                    <div class="checkout-seller__title">Продавец</div>
+                    <h5 class="checkout-seller__name"><a href="#">SergyFill</a></h5>
+                    <div class="checkout-seller__stats">
+                      <span class="checkout-seller__stat">
+                        <b>97%</b>
+                        <svg width="11" height="10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#like-icon"></use></svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-seller__rating">
+                  <div class="checkout-seller__title">Отзывы</div>
+                  <div class="rating">
+                    <div class="rating__item rating__item--up">+106</div>
+                    <div class="rating__item rating__item--down">-1</div>
+                  </div>
+                </div>
+                <div class="checkout-seller__action">
+                  <a href="#">Задать вопрос</a>
+                </div>
+              </div>
+            </div>
+            <div class="layout-product__desc">
+              <h3 class="layout-product__desc-title">Описание лота</h3>
+              <p class="layout-product__desc-text">Новые диски в коробках в целофане. Цена за 4 диска. Высококачественная реплика
+              диска TOYOTA p8174 (оригинальный номер Toyota 4261160640/4261160641) R17 (под
+              "тихие колёса" и мягкий ход). Для Toyota Land Cruiser 100 / 200 (Land Cruiser) / Lexus LX</p>
+              <ul class="layout-product__desc-list">
+                <li><span>Состояние</span><span>Новое</span></li>
+                <li><span>Ширина (см)</span><span>1900</span></li>
+                <li><span>Глубина (см)</span><span>Новое</span></li>
+                <li><span>Механизм</span><span>Книжка</span></li>
+                <li><span>Вид</span><span>Прямой</span></li>
+              </ul>
+              <div class="layout-product__contacts">
+                <h3>Контактная информация</h3>
+                <p>Склад-магазин "Аудио-Мастер"<p>
+                <p><b>Адрес:</b>  г. Красноярск, ул. Транзитная 3"А", стр.2, бокс №47 (рядом с домом Мичурина 33)<p>
+                <p><b>Тел.:</b>  8 (391) 285-25-55</p>
+                <p><b>Режим работы:</b> с 10:00 до 20:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__main">
+          <div class="container">
+            <div class="footer-main">
+              <div class="footer-main__lpart">
+                <a class="logo" href="#"><img src="img/logo.svg" alt="Аукционер"></a>
+              </div>
+              <div class="footer-main__rpart">
+                <div class="footer-main__box-wrap">
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Помощь</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Как купить?</a></li>
+                      <li><a href="#">Как продать</a></li>
+                      <li><a href="#">Отзыв и рейтинг</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Реклама на сайте</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Баннерная реклама</a></li>
+                      <li><a href="#">Рекламные объявления</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Пользовательское соглашение</a></li>
+                      <li><a href="#">Защита конфиденциальности</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="partners-pay">
+                  <h5 class="partners-pay__title">Мы работаем с</h5>
+                  <div class="partners-pay__links">
+                    <a href="#">
+                      <svg class="ps-logo" width="38" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-visa"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="35" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-master"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="73" height="26"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-qiwi"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="98" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-webmoney"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__line">
+          <div class="container">
+            <div class="copyright">
+              <span>Аукционер 2018</span>
+              <span>Разработано в Showbiz</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>

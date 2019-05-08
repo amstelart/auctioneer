@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аукционер</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__top">
+          <div class="container">
+            <div class="top-header">
+              <ul class="top-menu">
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Доставка</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Оплата</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Помощь</a>
+                </li>
+              </ul>
+              <div class="header-services">
+                <ul class="header-services__menu">
+                  <li>
+                    <a href="#">Регистрация</a>
+                  </li>
+                  <li>
+                    <a href="#">Вход</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__main">
+          <div class="container">
+            <div class="main-header">
+              <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
+
+              <div class="main-header__category dropdown">
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
+                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                </ul>
+              </div>
+
+              <div class="main-header__search">
+                <form class="search-form">
+                  <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                  <label class="field-select search-form__select">
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id="" name="">
+                        <option>Категории поиска</option>
+                        <option>Значение 1</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <button type="submit" class="search-form__btn"></button>
+                </form>
+              </div>
+              <div class="main-header__btn">
+                <a class="btn" href="#">Разместить лот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__nav">
+          <div class="container">
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Техника
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Одежда
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Для дома
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Автотовары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Красота
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Здоровье
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Спортивные товары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Сад
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Скидки
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Мода
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Гараж
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main" class="layout layout-chat container">
+        <div class="layout__inner chat__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Сообщения</a></li>
+          </ul>
+          <h1 class="layout__title">Сообщения</h1>
+
+          <div class="layout-chat__row">
+            <div class="layout-chat__sidebar">
+
+            </div>
+            <div class="layout-chat__main">
+              <div class="layout-chat__search">
+                <form class="search-form">
+                  <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                  <button type="submit" class="search-form__btn"></button>
+                </form>
+              </div>
+              <div class="layout-chat__list">
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Денис</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>А есть ли торг?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Игорь</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>Есть ли 18 диаметр?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Инна Иванова</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>Алексей, а можем ли мы перенести выдачу товара на следующую неделю? На это не..</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Анастасия</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>Отлично давайте тогда так и сделаем!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__main">
+          <div class="container">
+            <div class="footer-main">
+              <div class="footer-main__lpart">
+                <a class="logo" href="#"><img src="img/logo.svg" alt="Аукционер"></a>
+              </div>
+              <div class="footer-main__rpart">
+                <div class="footer-main__box-wrap">
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Помощь</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Как купить?</a></li>
+                      <li><a href="#">Как продать</a></li>
+                      <li><a href="#">Отзыв и рейтинг</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Реклама на сайте</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Баннерная реклама</a></li>
+                      <li><a href="#">Рекламные объявления</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Пользовательское соглашение</a></li>
+                      <li><a href="#">Защита конфиденциальности</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="partners-pay">
+                  <h5 class="partners-pay__title">Мы работаем с</h5>
+                  <div class="partners-pay__links">
+                    <a href="#">
+                      <svg class="ps-logo" width="38" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-visa"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="35" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-master"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="73" height="26"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-qiwi"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="98" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-webmoney"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__line">
+          <div class="container">
+            <div class="copyright">
+              <span>Аукционер 2018</span>
+              <span>Разработано в Showbiz</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>

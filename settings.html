@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аукционер</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__top">
+          <div class="container">
+            <div class="top-header">
+              <ul class="top-menu">
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Доставка</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Оплата</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Помощь</a>
+                </li>
+              </ul>
+              <div class="header-services">
+                <div class="dropdown header-services__user">
+                  <button class="dropdown__toggler  btn" id="dropdown-services__user" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Личнный кабинет, Alex5342
+                  </button>
+                  <ul class="dropdown__menu  dropdown__menu--down  menu" aria-labelledby="dropdown-services__user">
+                    <li class="menu__item"><a class="menu__link" href="#">Сообщения</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Мои лоты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Мои ставки</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Мои сделки</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Избранное</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Настройки</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__main">
+          <div class="container">
+            <div class="main-header">
+              <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
+
+              <div class="main-header__category dropdown">
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
+                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                </ul>
+              </div>
+
+              <div class="main-header__search">
+                <form class="search-form">
+                  <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                  <button type="submit" class="search-form__btn"></button>
+                </form>
+              </div>
+              <div class="main-header__btn">
+                <a class="btn" href="#">Разместить лот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__nav">
+          <div class="container">
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Техника
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Одежда
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Для дома
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Автотовары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Красота
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Здоровье
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Спортивные товары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Сад
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Скидки
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Мода
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Гараж
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main" class="layout layout-settings">
+        <div class="layout__inner layout-settings__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Настройки</a></li>
+          </ul>
+          <h1 class="layout__title">Настройки</h1>
+          <div class="layout-settings__part">
+            <h3>Личная информация</h3>
+            <form action="">
+              <div class="field-user">
+                <div class="field-user__img-wrap">
+                  <img class="field-user__img" src="img/field-user-img.png" alt="">
+                </div>
+                <div class="field-user__name-wrap">
+                  <div class="field-user__name">Evgen</div>
+                  <a class="field-user__change-link" href="#">Изменить фотографию</a>
+                </div>
+              </div>
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__name">Телефон</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__name">Пароль</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__name">E-mail</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__name">Дополнительная контактная информация</span>
+                  <span class="field-text__input-wrap">
+                    <textarea name="name" rows="8" cols="80" class="field-text__input" type="text" placeholder="placeholder">
+Склад-магазин "Аудио-Мастер"
+Адрес:  г. Красноярск, ул. Транзитная 3"А", стр.2, бокс №47 (рядом с домом Мичурина 33)
+Тел.:  8 (391) 285-25-55
+Режим работы: с 10:00 до 20:00
+                    </textarea>
+                  </span>
+                </label>
+                <button type="submit" class="btn">Обновить информацию</button>
+              </div>
+            </form>
+          </div>
+          <div class="layout-settings__part">
+            <h3>Местоположение</h3>
+            <form action="">
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" value="Россия, Калининград, ул. Чапаева" id="" name="">
+                  </span>
+                </label>
+              </div>
+              <div class="field-map">
+
+              </div>
+            </form>
+          </div>
+          <div class="layout-settings__part">
+            <h3>Условия передачи</h3>
+            <form action="">
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__name">Дополнительная контактная информация</span>
+                  <span class="field-text__input-wrap">
+                    <textarea name="name" rows="8" cols="80" class="field-text__input" type="text" placeholder="placeholder">
+Самовывоз. Возможна отправка ТК.
+Покупатель первым выходит на связь в течение 2-х дней.
+                    </textarea>
+                  </span>
+                </label>
+                <button type="submit" class="btn">Обновить информацию</button>
+              </div>
+            </form>
+          </div>
+          <div class="layout-settings__part">
+            <h3>Рассылки</h3>
+            <p>Получать на E-mail</p>
+            <form action="">
+              <div class="field-checkbox">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                    <span class="field-checkbox__name-text">Уведомления о личных сообщениях, вопросах по лотам и сделкам</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                    <span class="field-checkbox__name-text">Важные новости сайта, промо-программы, бонусы и скидки</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__main">
+          <div class="container">
+            <div class="footer-main">
+              <div class="footer-main__lpart">
+                <a class="logo" href="#"><img src="img/logo.svg" alt="Аукционер"></a>
+              </div>
+              <div class="footer-main__rpart">
+                <div class="footer-main__box-wrap">
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Помощь</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Как купить?</a></li>
+                      <li><a href="#">Как продать</a></li>
+                      <li><a href="#">Отзыв и рейтинг</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Реклама на сайте</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Баннерная реклама</a></li>
+                      <li><a href="#">Рекламные объявления</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Пользовательское соглашение</a></li>
+                      <li><a href="#">Защита конфиденциальности</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="partners-pay">
+                  <h5 class="partners-pay__title">Мы работаем с</h5>
+                  <div class="partners-pay__links">
+                    <a href="#">
+                      <svg class="ps-logo" width="38" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-visa"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="35" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-master"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="73" height="26"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-qiwi"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="98" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-webmoney"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__line">
+          <div class="container">
+            <div class="copyright">
+              <span>Аукционер 2018</span>
+              <span>Разработано в Showbiz</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>

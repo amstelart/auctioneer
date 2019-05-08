@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>NTH start project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__top">
+          <div class="container">
+            <div class="top-header">
+              <ul class="top-menu">
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Доставка</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Оплата</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Помощь</a>
+                </li>
+              </ul>
+              <div class="header-services">
+                <ul class="header-services__menu">
+                  <li>
+                    <a href="#">Регистрация</a>
+                  </li>
+                  <li>
+                    <a href="#">Вход</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__main">
+          <div class="container">
+            <div class="main-header">
+              <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
+
+              <div class="main-header__category dropdown">
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
+                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                </ul>
+              </div>
+
+              <div class="main-header__search">
+                <form class="search-form">
+                  <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                  <label class="field-select search-form__select">
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id="" name="">
+                        <option>Категории поиска</option>
+                        <option>Значение 1</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <button type="submit" class="search-form__btn"></button>
+                </form>
+              </div>
+              <div class="main-header__btn">
+                <a class="btn" href="#">Разместить лот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__nav">
+          <div class="container">
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Техника
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Одежда
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Для дома
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Автотовары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Красота
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Здоровье
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Спортивные товары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Сад
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Скидки
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Мода
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Гараж
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main" class="layout-main container">
+
+        <div class="layout-main__part bb">
+          <h3>Популярное</h3>
+
+          <div class="popular-carousel owl-carousel">
+            <div class="popular-carousel__item">
+              <article class="card card--sm">
+                <div class="card__inner">
+                  <a class="card__img-wrap" href="good01">
+                    <img class="card__img" src="img/card-sm-demo-img-01.jpg" alt="Товар1">
+                  </a>
+                  <h6 class="card__title">
+                    <a href="good01">Постельное белье Сатин Алекса</a>
+                  </h6>
+                  <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                </div>
+              </article>
+              <article class="card card--sm">
+                <div class="card__inner">
+                  <a class="card__img-wrap" href="good01">
+                    <img class="card__img" src="img/card-sm-demo-img-01.jpg" alt="Товар1">
+                  </a>
+                  <h6 class="card__title">
+                    <a href="good01">Постельное белье Сатин Алекса</a>
+                  </h6>
+                  <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="layout-main__part bb">
+          <h3>Акции</h3>
+
+          <div class="stocks-cards-list">
+            <article class="card">
+              <div class="card__inner">
+                <a class="card__img-wrap" href="good01">
+                  <img class="card__img" src="img/card-demo-img-01.jpg" alt="Товар1">
+                </a>
+                <h6 class="card__title">
+                  <a href="good01">Постельное белье Сатин Алекса</a>
+                </h6>
+                <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                <p class="card__price-sale"><s>1&thinsp;600&nbsp;руб.</s>&nbsp;&nbsp;32% СКИДКА</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__inner">
+                <a class="card__img-wrap" href="good01">
+                  <img class="card__img" src="img/card-demo-img-02.jpg" alt="Товар1">
+                </a>
+                <h6 class="card__title">
+                  <a href="good01">Предметы для кухни (ложки, миски, чашки, кувшины)</a>
+                </h6>
+                <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                <p class="card__price-sale"><s>1&thinsp;600&nbsp;руб.</s>&nbsp;&nbsp;32% СКИДКА</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__inner">
+                <a class="card__img-wrap" href="good01">
+                  <img class="card__img" src="img/card-demo-img-03.jpg" alt="Товар1">
+                </a>
+                <h6 class="card__title">
+                  <a href="good01">Светилник для зала</a>
+                </h6>
+                <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                <p class="card__price-sale"><s>1&thinsp;600&nbsp;руб.</s>&nbsp;&nbsp;32% СКИДКА</p>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__inner">
+                <a class="card__img-wrap" href="good01">
+                  <img class="card__img" src="img/card-demo-img-03.jpg" alt="Товар1">
+                </a>
+                <h6 class="card__title">
+                  <a href="good01">Светилник для зала</a>
+                </h6>
+                <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                <p class="card__price-sale"><s>1&thinsp;600&nbsp;руб.</s>&nbsp;&nbsp;32% СКИДКА</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="layout-main__part">
+          <h3>Популярные категории</h3>
+          <div class="c-cards-list">
+            <div class="c-card c-card--tech">
+              <div class="c-card__inner">
+                <a href="#" class="c-card__img-wrap">
+                  <img src="img/c-card-img--tech.jpg" alt="" class="c-card__img">
+                </a>
+                <h4 class="c-card__title">
+                  <a href="#">Техника</a>
+                </h4>
+              </div>
+            </div>
+            <div class="c-card c-card--clothes">
+              <div class="c-card__inner">
+                <a href="#" class="c-card__img-wrap">
+                  <img src="img/c-card-img--clothes.jpg" alt="" class="c-card__img">
+                </a>
+                <h4 class="c-card__title">
+                  <a href="#">Одежда</a>
+                </h4>
+              </div>
+            </div>
+            <div class="c-card c-card--home">
+              <div class="c-card__inner">
+                <a href="#" class="c-card__img-wrap">
+                  <img src="img/c-card-img--home.jpg" alt="" class="c-card__img">
+                </a>
+                <h4 class="c-card__title">
+                  <a href="#">Для дома</a>
+                </h4>
+              </div>
+            </div>
+            <div class="c-card c-card--auto">
+              <div class="c-card__inner">
+                <a href="#" class="c-card__img-wrap">
+                  <img src="img/c-card-img--auto.jpg" alt="" class="c-card__img">
+                </a>
+                <h4 class="c-card__title">
+                  <a href="#">Автотовары</a>
+                </h4>
+              </div>
+            </div>
+            <div class="c-card c-card--beauty">
+              <div class="c-card__inner">
+                <a href="#" class="c-card__img-wrap">
+                  <img src="img/c-card-img--beauty.jpg" alt="" class="c-card__img">
+                </a>
+                <h4 class="c-card__title">
+                  <a href="#">Красота</a>
+                </h4>
+              </div>
+            </div>
+            <div class="c-card c-card--health">
+              <div class="c-card__inner">
+                <a href="#" class="c-card__img-wrap">
+                  <img src="img/c-card-img--health.jpg" alt="" class="c-card__img">
+                </a>
+                <h4 class="c-card__title">
+                  <a href="#">Здоровье</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="layout-main__part">
+          <a href="#" class="banner">
+            <img src="img/banner-demo.jpg" alt="">
+          </a>
+        </div>
+
+        <div class="layout-main__part">
+          <h3>Топ продавцов</h3>
+          <div class="seller-cards-list">
+            <div class="seller-card">
+              <div class="seller-card__inner">
+                <a href="#" class="seller-card__img-wrap">
+                  <img class="seller-card__img" src="img/seller-card-demo-img.jpg" width="67" height="67" alt="SergyFill">
+                </a>
+                <div class="seller-card__body">
+                  <h5 class="seller-card__title"><a href="#">SergyFill</a></h5>
+                  <div class="seller-card__stats">
+                    <span class="seller-card__stat">
+                      <b>97%</b>
+                      <svg width="11" height="10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#like-icon"></use></svg>
+                    </span>
+                    <span class="seller-card__stat"><b>1523</b>&nbsp;товаров</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="seller-card">
+              <div class="seller-card__inner">
+                <a href="#" class="seller-card__img-wrap">
+                  <img class="seller-card__img" src="img/seller-card-demo-img.jpg" width="67" height="67" alt="dimonpokemon">
+                </a>
+                <div class="seller-card__body">
+                  <h5 class="seller-card__title"><a href="#">dimonpokemon</a></h5>
+                  <div class="seller-card__stats">
+                    <span class="seller-card__stat">
+                      <b>97%</b>
+                      <svg width="11" height="10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#like-icon"></use></svg>
+                    </span>
+                    <span class="seller-card__stat"><b>1523</b>&nbsp;товаров</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="seller-card">
+              <div class="seller-card__inner">
+                <a href="#" class="seller-card__img-wrap">
+                  <img class="seller-card__img" src="img/seller-card-demo-img.jpg" width="67" height="67" alt="Alexmau5">
+                </a>
+                <div class="seller-card__body">
+                  <h5 class="seller-card__title"><a href="#">Alexmau5</a></h5>
+                  <div class="seller-card__stats">
+                    <span class="seller-card__stat">
+                      <b>97%</b>
+                      <svg width="11" height="10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#like-icon"></use></svg>
+                    </span>
+                    <span class="seller-card__stat"><b>1523</b>&nbsp;товаров</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="seller-card">
+              <div class="seller-card__inner">
+                <a href="#" class="seller-card__img-wrap">
+                  <img class="seller-card__img" src="img/seller-card-demo-img.jpg" width="67" height="67" alt="Onotole">
+                </a>
+                <div class="seller-card__body">
+                  <h5 class="seller-card__title"><a href="#">Onotole</a></h5>
+                  <div class="seller-card__stats">
+                    <span class="seller-card__stat">
+                      <b>97%</b>
+                      <svg width="11" height="10"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#like-icon"></use></svg>
+                    </span>
+                    <span class="seller-card__stat"><b>1523</b>&nbsp;товаров</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__main">
+          <div class="container">
+            <div class="footer-main">
+              <div class="footer-main__lpart">
+                <a class="logo" href="#"><img src="img/logo.svg" alt="Аукционер"></a>
+              </div>
+              <div class="footer-main__rpart">
+                <div class="footer-main__box-wrap">
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Помощь</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Как купить?</a></li>
+                      <li><a href="#">Как продать</a></li>
+                      <li><a href="#">Отзыв и рейтинг</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Реклама на сайте</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Баннерная реклама</a></li>
+                      <li><a href="#">Рекламные объявления</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Пользовательское соглашение</a></li>
+                      <li><a href="#">Защита конфиденциальности</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="partners-pay">
+                  <h5 class="partners-pay__title">Мы работаем с</h5>
+                  <div class="partners-pay__links">
+                    <a href="#">
+                      <svg class="ps-logo" width="38" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-visa"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="35" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-master"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="73" height="26"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-qiwi"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="98" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-webmoney"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__line">
+          <div class="container">
+            <div class="copyright">
+              <span>Аукционер 2018</span>
+              <span>Разработано в Showbiz</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
