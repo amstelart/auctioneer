@@ -1,0 +1,66 @@
+// В этом файле должны быть стили для БЭМ-блока search, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.search-form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  // height: $header-height;
+
+  &__input {
+    margin: 0;
+    padding: 12px 15px;
+    flex-grow: 1;
+    background: #fff;
+    border: 1px solid #dadada;
+    border-right: 0;
+    border-radius: 2px 0 0 2px;
+    height: 100%;
+
+    &::placeholder {
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    &[type='search']::-webkit-search-cancel-button,
+    &[type='search']::-webkit-search-decoration {
+      -webkit-appearance: none; /* stylelint-disable-line  property-no-vendor-prefix */
+    }
+  }
+
+  &__select {
+
+    margin-bottom: 0;
+    flex-basis: 220px;
+
+    .field-select__select {
+      padding: 9px 40px 9px 15px;
+      flex-grow: 1;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='13px' height='7px'%3E%3Cpath fill-rule='evenodd' fill='rgb(187, 187, 187)' d='M5.425,6.748 L0.279,1.465 C-0.048,1.128 -0.048,0.584 0.279,0.248 C0.606,-0.088 1.137,-0.088 1.464,0.248 L6.018,4.923 L10.571,0.248 C10.899,-0.088 11.429,-0.088 11.756,0.248 C12.084,0.584 12.084,1.128 11.756,1.465 L6.610,6.748 C6.447,6.916 6.232,6.999 6.018,6.999 C5.803,6.999 5.589,6.915 5.425,6.748 Z'/%3E%3C/svg%3E");
+      background-size: auto;
+      background-size: 13px 7px;
+      background-position: top 50% right 14px;
+      border: 1px solid #dadada;
+      border-right: 0;
+      border-radius: 0;
+      height: 100%;
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    border-radius: 0 2px 2px 0;
+    border: 1px solid #dadada;
+    background-color: #ffffff;
+    width: 48px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='15' height='16' viewBox='0 0 15 16'%3E%3Cdefs%3E%3Cpath id='n8mwa' d='M1513.743 319.764a.801.801 0 0 1-1.156-.023l-3.725-3.99a6.08 6.08 0 0 1-3.593 1.168c-3.458 0-6.27-2.898-6.27-6.46s2.812-6.46 6.27-6.46c3.458 0 6.271 2.898 6.271 6.46 0 1.525-.52 2.99-1.471 4.153l3.697 3.96a.861.861 0 0 1-.023 1.192zm-13.109-9.305c0 2.633 2.08 4.775 4.635 4.775 2.556 0 4.635-2.142 4.635-4.775 0-2.633-2.079-4.774-4.635-4.774-2.556 0-4.635 2.141-4.635 4.774z'/%3E%3C/defs%3E%3Cg%3E%3Cg transform='translate(-1499 -304)'%3E%3Cuse fill='%232890e0' xlink:href='%23n8mwa'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

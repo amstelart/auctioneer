@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аукционер</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main" class="layout layout-feedback container">
+        <div class="layout__inner layout-feedback__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Отзывы</a></li>
+          </ul>
+          <h1 class="layout__title">Отзывы</h1>
+          <div class="layout-feedback__header">
+            <div class="btn-group">
+              <button class="btn btn--active">На меня</button>
+              <button class="btn">Мои</button>
+            </div>
+            <p>48 отзывов от покупателей за всё время</p>
+            <ul class="feedback-nav">
+              <li class="feedback-nav__item feedback-nav__item--active"><a class="feedback-nav__link" href="#">Все</a></li>
+              <li class="feedback-nav__item"><a class="feedback-nav__link" href="#">Положительные(45)</a></li>
+              <li class="feedback-nav__item"><a class="feedback-nav__link" href="#">Нейтральные(0)</a></li>
+              <li class="feedback-nav__item"><a class="feedback-nav__link" href="#">Отрицательне(3)</a></li>
+            </ul>
+          </div>
+          <div class="layout-feedback__list">
+            <div class="feedback-card">
+              <div class="feedback-card__inner">
+                <div class="feedback-card__img-wrap">
+                  <img class="feedback-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                </div>
+                <div class="feedback-card__body">
+                  <div class="feedback-card__top">
+                    <h5 class="feedback-card__name">Денис</h5>
+                    <div class="feedback-card__date">
+                      <span>14 дек в 15:43</span>
+                    </div>
+                  </div>
+                  <p class="feedback-card__desk">+ за заказ "Литые диски"</p>
+                  <div class="feedback-card__text">
+                    <p>Все отлично, очень доволен сотрудничеством. Однозначно рекомендую.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-card">
+              <div class="feedback-card__inner">
+                <div class="feedback-card__img-wrap">
+                  <img class="feedback-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                </div>
+                <div class="feedback-card__body">
+                  <div class="feedback-card__top">
+                    <h5 class="feedback-card__name">resident48</h5>
+                    <div class="feedback-card__date">
+                      <span>14 дек в 15:43</span>
+                    </div>
+                  </div>
+                  <p class="feedback-card__desk">+ за заказ "Литые диски"</p>
+                  <div class="feedback-card__text">
+                    <p>Благодарю Сергея за предоставленные диски! Сотрудничеством остался доволен.  Рекомендую как отличного клиента!.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-card">
+              <div class="feedback-card__inner">
+                <div class="feedback-card__img-wrap">
+                  <img class="feedback-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                </div>
+                <div class="feedback-card__body">
+                  <div class="feedback-card__top">
+                    <h5 class="feedback-card__name">Анна</h5>
+                    <div class="feedback-card__date">
+                      <span>14 дек в 15:43</span>
+                    </div>
+                  </div>
+                  <p class="feedback-card__desk">+ за заказ "Литые диски"</p>
+                  <div class="feedback-card__text">
+                    <p>Работать с Сергеем одно удовольствие, всегда на связи, все вопросы решались оперативно, в самом заказе все четко и без лишней воды. С удовольствием поработаю с Вами в дальнейшем.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pagination pagination--center">
+            <a href="" class="pagination__item">1</a>
+            <a href="" class="pagination__item">2</a>
+            <a href="" class="pagination__item  pagination__item--active">3</a>
+            <a href="" class="pagination__item">4</a>
+            <span class="pagination__item">...</span>
+            <a href="" class="pagination__item">15</a>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

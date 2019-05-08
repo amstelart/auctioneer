@@ -1,0 +1,101 @@
+// В этом файле должны быть стили для БЭМ-блока checkout-seller, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.checkout-seller {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border-radius: 2px;
+  border: 1px solid #dfdfdf;
+  padding: 10px;
+  margin-bottom: 30px;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-basis: 260px;
+    min-width: 260px;
+  }
+
+  &__rating {
+    margin-left: 86px;
+    flex-basis: 80px;
+    min-width: 80px;
+    flex-shrink: 0;
+
+    .rating {
+      margin: 0 10px 10px 0;
+    }
+  }
+
+  &__action {
+    margin-left: 86px;
+    flex-grow: 1;
+    flex-basis: 200px;
+
+    a {
+      color: #0c5482;
+      font-size: 14px;
+      font-weight: 400;
+      text-decoration: none;
+      padding: 15px 20px 15px 0;
+    }
+  }
+
+  &__title {
+    color: #a9a9a9;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__img-wrap {
+    flex-shrink: 0;
+    display: block;
+    margin-right: 20px;
+  }
+
+  &__img {
+    display: block;
+    border-radius: 50%;
+  }
+
+  &__body {
+    flex-grow: 1;
+  }
+
+  &__name {
+    margin: 0 10px 10px 0;
+    font-size: 14px;
+    font-weight: 400;
+    display: inline-block;
+
+    a {
+      color: #0c5482;
+      text-decoration: none;
+    }
+  }
+
+  &__stats {
+    display: inline-block;
+  }
+
+  &__stat {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    font-size: 13px;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+}

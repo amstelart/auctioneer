@@ -1,0 +1,96 @@
+// В этом файле должны быть стили для БЭМ-блока c-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.c-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 165px;
+  flex-basis: 16.6666%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+
+  &__inner {
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__img-wrap {
+    flex-shrink: 0;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__img {
+    display: block;
+    border-radius: 50%;
+  }
+
+  &__title {
+    margin: 0 0 20px;
+    font-weight: 700;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &--tech {
+    #{$block-name}__title {
+      a {
+        color: #f6375c;
+      }
+    }
+  }
+
+  &--clothes {
+    #{$block-name}__title {
+      a {
+        color: #4665c9;
+      }
+    }
+  }
+
+  &--home {
+    #{$block-name}__title {
+      a {
+        color: #598871;
+      }
+    }
+  }
+
+  &--auto {
+    #{$block-name}__title {
+      a {
+        color: #1b1e22;
+      }
+    }
+  }
+
+  &--beauty {
+    #{$block-name}__title {
+      a {
+        color: #db9894;
+      }
+    }
+  }
+
+  &--health {
+    #{$block-name}__title {
+      a {
+        color: #a5845b;
+      }
+    }
+  }
+}

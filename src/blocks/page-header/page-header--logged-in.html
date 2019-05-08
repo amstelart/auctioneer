@@ -1,0 +1,137 @@
+<!--DEV
+
+Нужно убрать пробел между @-ами:
+
+@ @include('blocks/page-header/page-header.html')
+
+-->
+
+<header class="page-header" role="banner">
+  <div class="page-header__top">
+    <div class="container">
+      <div class="top-header">
+        <ul class="top-menu">
+          <li class="top-menu__item">
+            <a class="top-menu__link" href="#">О сервисе</a>
+          </li>
+          <li class="top-menu__item">
+            <a class="top-menu__link" href="#">Доставка</a>
+          </li>
+          <li class="top-menu__item">
+            <a class="top-menu__link" href="#">Оплата</a>
+          </li>
+          <li class="top-menu__item">
+            <a class="top-menu__link" href="#">Помощь</a>
+          </li>
+        </ul>
+        <div class="header-services">
+          <div class="dropdown header-services__user">
+            <button class="dropdown__toggler  btn" id="dropdown-services__user" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Личнный кабинет, Alex5342
+            </button>
+            <ul class="dropdown__menu  dropdown__menu--down  menu" aria-labelledby="dropdown-services__user">
+              <li class="menu__item"><a class="menu__link" href="#">Сообщения</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Мои лоты</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Мои ставки</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Мои сделки</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Избранное</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+              <li class="menu__item"><a class="menu__link" href="#">Настройки</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-header__main">
+    <div class="container">
+      <div class="main-header">
+        <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
+
+        <div class="main-header__category dropdown">
+          <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
+          <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
+            <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+            <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+          </ul>
+        </div>
+
+        <div class="main-header__search">
+          <form class="search-form">
+            <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+            <button type="submit" class="search-form__btn"></button>
+          </form>
+        </div>
+        <div class="main-header__btn">
+          <a class="btn" href="#">Разместить лот</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-header__nav">
+    <div class="container">
+      <nav id="main-nav" class="main-nav" role="navigation">
+        <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Техника
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Одежда
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Для дома
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Автотовары
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Красота
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Здоровье
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Спортивные товары
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Сад
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Скидки
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Мода
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">
+              Гараж
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

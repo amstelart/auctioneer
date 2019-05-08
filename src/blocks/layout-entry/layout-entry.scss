@@ -1,0 +1,29 @@
+// В этом файле должны быть стили для БЭМ-блока layout-entry, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-entry {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  &__inner {
+    max-width: 420px;
+    margin: auto;
+  }
+
+  &__title {
+    font-size: $font-size--h2;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__box {
+    border-radius: 4px;
+    background-color: #d8eef9;
+    padding: 40px 80px;
+  }
+
+}

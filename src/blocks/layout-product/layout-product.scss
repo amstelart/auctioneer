@@ -1,0 +1,126 @@
+// В этом файле должны быть стили для БЭМ-блока layout-product, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-product {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding-top: 20px;
+
+  &__inner {
+    @include row;
+  }
+
+  &__photo {
+    @include col();
+    @include col(xl, 5);
+  }
+
+  &__main {
+    @include col();
+    @include col(xl, 7);
+
+    .breadcrumbs {
+      margin-top: 5px;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  &__lott-num {
+    font-size: 13px;
+    color: #a9a9a9;
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    margin-bottom: 30px;
+  }
+  &__price-title {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+  }
+  &__price-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  &__price-box-val {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 5px 15px 5px 0;
+
+    span {
+      font-size: 16px;
+      color: #a9a9a9;
+      font-weight: 500;
+    }
+  }
+  &__price-box-btn {}
+
+  &__info {
+    margin-bottom: 30px;
+
+    p {
+      color: #a9a9a9;
+      svg {
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+      span {
+        color: #000;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &__desc {}
+  &__desc-title {
+    font-weight: 500;
+  }
+  &__desc-text {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  &__desc-list {
+    list-style: none;
+    padding-left: 0;
+    max-width: 400px;
+
+    li {
+      margin-bottom: 10px;
+      display: flex;
+
+      span:first-child {
+        display: flex;
+        flex-grow: 1;
+        align-items: baseline;
+        &:after {
+          content: "";
+          flex-grow: 1;
+          border-bottom: 1px dashed $border-color;
+          margin-left: 3px;
+          margin-right: 7px;
+        }
+      }
+
+      span:last-child {
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__contacts {
+
+  }
+
+
+
+}

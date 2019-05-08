@@ -1,0 +1,58 @@
+// В этом файле должны быть стили для БЭМ-блока header-services, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.header-services {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 11px 0;
+
+    li {
+      margin-left: 30px;
+    }
+
+    a {
+      font-size: 13px;
+      font-weight: 400;
+      color: #000;
+    }
+  }
+
+  &__user {
+    .btn {
+      background-color: #d8eef9;
+      background-image: none;
+      color: #0c5482;
+      font-size: 13px;
+      font-weight: 400;
+      min-width: auto;
+      padding: 4px 25px 4px 10px;
+      margin-top: 7px;
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='10px' height='6px'%3E%3Cpath fill-rule='evenodd' fill='rgb(40, 144, 224)' d='M4.494,5.784 L0.192,1.251 C-0.081,0.963 -0.081,0.496 0.192,0.208 C0.466,-0.080 0.909,-0.080 1.183,0.208 L4.989,4.218 L8.794,0.208 C9.068,-0.080 9.512,-0.080 9.785,0.208 C10.059,0.496 10.059,0.963 9.785,1.251 L5.484,5.784 C5.347,5.928 5.168,5.999 4.989,5.999 C4.809,5.999 4.630,5.927 4.494,5.784 Z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: top 50% right 10px;
+    }
+
+    .dropdown__menu {
+      border: solid 1px #13a6e2;
+      background-color: #fff;
+      z-index: 20;
+      padding: 10px 20px 15px 20px;
+    }
+
+    .menu {
+      &__link {
+        color: #0c5482;
+      }
+    }
+  }
+
+}

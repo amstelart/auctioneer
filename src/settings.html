@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аукционер</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header--logged-in.html')
+
+      <main role="main" class="layout layout-settings">
+        <div class="layout__inner layout-settings__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Настройки</a></li>
+          </ul>
+          <h1 class="layout__title">Настройки</h1>
+          <div class="layout-settings__part">
+            <h3>Личная информация</h3>
+            <form action="">
+              <div class="field-user">
+                <div class="field-user__img-wrap">
+                  <img class="field-user__img" src="img/field-user-img.png" alt="">
+                </div>
+                <div class="field-user__name-wrap">
+                  <div class="field-user__name">Evgen</div>
+                  <a class="field-user__change-link" href="#">Изменить фотографию</a>
+                </div>
+              </div>
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__name">Телефон</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__name">Пароль</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__name">E-mail</span>
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__name">Дополнительная контактная информация</span>
+                  <span class="field-text__input-wrap">
+                    <textarea name="name" rows="8" cols="80" class="field-text__input" type="text" placeholder="placeholder">
+Склад-магазин "Аудио-Мастер"
+Адрес:  г. Красноярск, ул. Транзитная 3"А", стр.2, бокс №47 (рядом с домом Мичурина 33)
+Тел.:  8 (391) 285-25-55
+Режим работы: с 10:00 до 20:00
+                    </textarea>
+                  </span>
+                </label>
+                <button type="submit" class="btn">Обновить информацию</button>
+              </div>
+            </form>
+          </div>
+          <div class="layout-settings__part">
+            <h3>Местоположение</h3>
+            <form action="">
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" value="Россия, Калининград, ул. Чапаева" id="" name="">
+                  </span>
+                </label>
+              </div>
+              <div class="field-map">
+
+              </div>
+            </form>
+          </div>
+          <div class="layout-settings__part">
+            <h3>Условия передачи</h3>
+            <form action="">
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__name">Дополнительная контактная информация</span>
+                  <span class="field-text__input-wrap">
+                    <textarea name="name" rows="8" cols="80" class="field-text__input" type="text" placeholder="placeholder">
+Самовывоз. Возможна отправка ТК.
+Покупатель первым выходит на связь в течение 2-х дней.
+                    </textarea>
+                  </span>
+                </label>
+                <button type="submit" class="btn">Обновить информацию</button>
+              </div>
+            </form>
+          </div>
+          <div class="layout-settings__part">
+            <h3>Рассылки</h3>
+            <p>Получать на E-mail</p>
+            <form action="">
+              <div class="field-checkbox">
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                    <span class="field-checkbox__name-text">Уведомления о личных сообщениях, вопросах по лотам и сделкам</span>
+                  </label>
+                </div>
+                <div class="field-checkbox__input-wrap">
+                  <label class="field-checkbox__name">
+                    <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                    <span class="field-checkbox__name-text">Важные новости сайта, промо-программы, бонусы и скидки</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

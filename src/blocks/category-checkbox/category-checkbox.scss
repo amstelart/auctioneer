@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока category-checkbox, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.category-checkbox {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__input-wrap {
+    border: 2px solid #bed9e6;
+    padding: 15px;
+
+    & + & {
+      border-top: none;
+    }
+  }
+
+  &__name {
+  }
+
+  &__fake-input {
+    position: relative;
+    padding-right: 20px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 0;
+      width: 14px;
+      height: 14px;
+      border: 2px solid currentColor;
+      border-radius: $border-radius;
+    }
+
+    @at-root input:focus ~ &:before {
+      @include field-focus;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      right: 0;
+      width: 14px;
+      height: 6px;
+      opacity: 0;
+      border-left: 2px solid currentColor;
+      border-bottom: 2px solid currentColor;
+      transform: rotate(-45deg);
+      transition: opacity $transition-time;
+
+      @at-root input:checked ~ & {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__name-text {
+    display: block;
+    font-size: 14px;
+    color: #000;
+  }
+
+  &__name-val {
+    display: block;
+    font-size: 12px;
+    color: #a9a9a9;
+  }
+
+  &__input {
+    position: absolute;
+    top: 0.7em;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transform: translateY(-50%);
+
+    &:focus,
+    &:active {
+      @include field-focus;
+    }
+
+    // сокрытие инпута в случае использования своего чекбокса
+    opacity: 0;
+  }
+
+
+}

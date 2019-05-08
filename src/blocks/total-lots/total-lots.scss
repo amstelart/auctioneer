@@ -1,0 +1,20 @@
+// В этом файле должны быть стили для БЭМ-блока total-lots, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.total-lots {
+
+  $block-name:                &; // #{$block-name}__element
+
+  white-space: nowrap;
+
+  &__title {
+    color: #a9a9a9;
+    font-size: 14px;
+  }
+
+  &__value {
+    font-size: 14px;
+    color: #000;
+  }
+}

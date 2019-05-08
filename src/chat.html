@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аукционер</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main role="main" class="layout layout-chat container">
+        <div class="layout__inner chat__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Личный кабинет</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Сообщения</a></li>
+          </ul>
+          <h1 class="layout__title">Сообщения</h1>
+
+          <div class="layout-chat__row">
+            <div class="layout-chat__sidebar">
+
+            </div>
+            <div class="layout-chat__main">
+              <div class="layout-chat__search">
+                <form class="search-form">
+                  <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                  <button type="submit" class="search-form__btn"></button>
+                </form>
+              </div>
+              <div class="layout-chat__list">
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Денис</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>А есть ли торг?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Игорь</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>Есть ли 18 диаметр?</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Инна Иванова</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>Алексей, а можем ли мы перенести выдачу товара на следующую неделю? На это не..</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <div class="chat-card__inner">
+                    <div class="chat-card__img-wrap">
+                      <img class="chat-card__img" src="img/seller-card-demo-img.jpg" alt="">
+                    </div>
+                    <div class="chat-card__body">
+                      <div class="chat-card__top">
+                        <h5 class="chat-card__name">Анастасия</h5>
+                        <div class="chat-card__date">
+                          <span>14 дек в 15:43</span>
+                        </div>
+                      </div>
+                      <div class="chat-card__text">
+                        <p>Отлично давайте тогда так и сделаем!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+</html>

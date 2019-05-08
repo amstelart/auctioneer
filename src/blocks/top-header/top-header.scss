@@ -1,0 +1,12 @@
+// В этом файле должны быть стили для БЭМ-блока top-header, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.top-header {
+
+  $block-name:                &; // #{$block-name}__element
+
+  height: 40px;
+  display: flex;
+
+}

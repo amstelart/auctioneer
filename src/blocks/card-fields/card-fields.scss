@@ -1,0 +1,27 @@
+// В этом файле должны быть стили для БЭМ-блока card-fields, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.card-fields {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+
+  }
+
+  &__action {
+    margin-bottom: 30px;
+  }
+
+  &__action-text {
+    padding: 4px 4px 4px 0;
+    display: inline-block;
+  }
+
+  &__action-link {
+    display: inline-block;
+    padding: 4px 8px;
+  }
+
+}

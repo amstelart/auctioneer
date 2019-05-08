@@ -1,0 +1,40 @@
+// В этом файле должны быть стили для БЭМ-блока checkout-lot, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.checkout-lot {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border-radius: 2px;
+  background-color: #f5eed0;
+  margin-bottom: 30px;
+
+  &__inner {
+    padding: 20px;
+    display: flex;
+  }
+
+  &__img-wrap {
+    margin-right: 30px;
+    flex-shrink: 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+
+  &__city {
+    flex-grow: 1;
+  }
+
+  &__price {
+    flex-shrink: 0;
+    color: #050505;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+}

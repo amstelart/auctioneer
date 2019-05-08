@@ -1,0 +1,46 @@
+// В этом файле должны быть стили для БЭМ-блока category-view, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.category-view {
+
+  $block-name:                &; // #{$block-name}__element
+
+  min-width: 69px;
+
+  &__control {
+    display: flex;
+  }
+
+  &__control-icon {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    border: 2px solid #dadada;
+    position: relative;
+    cursor: pointer;
+
+    &:first-child {
+      margin-right: 9px;
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: #b3b3b3;
+    }
+
+    &.active {
+      border-color: #13a6e2;
+      cursor: inherit;
+
+      svg {
+        fill: #13a6e2;
+      }
+    }
+  }
+
+}

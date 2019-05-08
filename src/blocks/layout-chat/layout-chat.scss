@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока layout-chat, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-chat {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__row {
+    @include row;
+  }
+
+  &__sidebar {
+    @include col();
+    @include col(xl, 3);
+  }
+
+  &__main {
+    @include col();
+    @include col(xl, 9);
+  }
+
+  &__search {
+    border-radius: 2px;
+    background-color: #d8eef9;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    .chat-card {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

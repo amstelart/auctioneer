@@ -1,0 +1,33 @@
+// В этом файле должны быть стили для БЭМ-блока feedback-list, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.feedback-nav {
+
+  $block-name:                &; // #{$block-name}__element
+
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+
+  &__item {
+
+    display: inline-block;
+    margin: 0 15px 10px 0;
+
+    &--active {
+
+      #{$block-name}__link {
+        color: #0d8bbf;
+      }
+    }
+  }
+
+  &__link {
+    color: #000;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
