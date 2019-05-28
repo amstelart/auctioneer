@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>NTH start project</title>
+  <title>Аукционер</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -67,14 +67,20 @@
                 </li>
               </ul>
               <div class="header-services">
-                <ul class="header-services__menu">
-                  <li>
-                    <a href="#">Регистрация</a>
-                  </li>
-                  <li>
-                    <a href="#">Вход</a>
-                  </li>
-                </ul>
+                <div class="dropdown header-services__user">
+                  <button class="dropdown__toggler  btn" id="dropdown-services__user" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Личнный кабинет, Alex5342
+                  </button>
+                  <ul class="dropdown__menu  dropdown__menu--down  menu" aria-labelledby="dropdown-services__user">
+                    <li class="menu__item"><a class="menu__link" href="#">Сообщения</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Мои лоты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Мои ставки</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Мои сделки</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Избранное</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Настройки</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -82,12 +88,10 @@
         <div class="page-header__main">
           <div class="container">
             <div class="main-header">
-              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
-        
               <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
 
               <div class="main-header__category dropdown">
-                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все&nbsp;категории</a>
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
                 <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
                   <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
                   <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
@@ -99,31 +103,19 @@
               <div class="main-header__search">
                 <form class="search-form">
                   <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
-                  <label class="field-select search-form__select">
-                    <div class="field-select__select-wrap">
-                      <select class="field-select__select" id="" name="">
-                        <option>Категории поиска</option>
-                        <option>Значение 1</option>
-                        <option>Значение 2</option>
-                        <option>Значение 3</option>
-                      </select>
-                    </div>
-                  </label>
                   <button type="submit" class="search-form__btn"></button>
                 </form>
               </div>
-
               <div class="main-header__btn">
                 <a class="btn" href="#">Разместить лот</a>
               </div>
-
             </div>
           </div>
         </div>
         <div class="page-header__nav">
           <div class="container">
             <nav id="main-nav" class="main-nav" role="navigation">
-              <!-- <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
               <ul class="main-nav__list">
                 <li class="main-nav__item">
                   <a href="#" class="main-nav__link">
@@ -187,57 +179,148 @@
       </header>
 
 
-      <main role="main" class="layout-entry container">
-        <div class="layout-entry__inner">
-          <h1 class="layout-entry__title">Регистрация</h1>
-          <div class="layout-entry__box">
-            <form class="layout-entry__form layout-entry__form--registration" action="">
-              <label class="field-text">
-                <span class="field-text__name">Имя</span>
-                <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                  <span class="field-text__help-text">Пояснение</span>
-                </span>
-              </label>
-              <label class="field-text">
-                <span class="field-text__name">Телефон</span>
-                <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                  <span class="field-text__help-text">Пояснение</span>
-                </span>
-              </label>
-              <label class="field-text">
-                <span class="field-text__name">Email</span>
-                <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                  <span class="field-text__help-text">Пояснение</span>
-                </span>
-              </label>
-              <label class="field-text">
-                <span class="field-text__name">Введите пароль</span>
-                <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                  <span class="field-text__help-text">Пояснение</span>
-                </span>
-              </label>
-              <label class="field-text">
-                <span class="field-text__name">Повторите пароль</span>
-                <span class="field-text__input-wrap">
-                  <input class="field-text__input" type="text" placeholder="placeholder" id="" name="">
-                  <span class="field-text__help-text">Пояснение</span>
-                </span>
-              </label>
-              <div class="field-actions">
-                <button class="btn">Регистрация</button>
-              </div>
-              <div class="field-checkbox">
-                <label class="field-checkbox__name">
-                  <input class="field-checkbox__input" type="checkbox" id="" name="">
-                  <span class="field-checkbox__name-text">Я соглашаюсь с условиями обработки данных</span>
+      <main role="main" class="layout layout-addlot">
+        <div class="layout__inner layout-addlot__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Создать лот</a></li>
+          </ul>
+          <h1 class="layout__title">Создать лот</h1>
+          <form action="" class="layout-addlot__form">
+            <div class="layout-addlot__part">
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Введите название лота" id="" name="">
+                  </span>
+                </label>
+                <label class="field-select">
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select" id="" name="">
+                      <option>Выберите категорию</option>
+                      <option>Значение 1</option>
+                      <option>Значение 2</option>
+                      <option>Значение 3</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <textarea name="name" rows="8" cols="80" class="field-text__input" type="text" placeholder="Введите описание товара"></textarea>
+                  </span>
                 </label>
               </div>
-            </form>
-          </div>
+            </div>
+            <div class="layout-addlot__part">
+              <h2 class="layout-addlot__part-title">Добавить фотографии</h2>
+            </div>
+            <div class="layout-addlot__part">
+              <h2 class="layout-addlot__part-title">Тип торгов</h2>
+              <div class="field-radio field-radio--inline">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" id="" name="demo-radio-1" checked>
+                    <span class="field-radio__name-text">Аукционная продажа</span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" id="" name="demo-radio-1">
+                    <span class="field-radio__name-text">Обычная продажа</span>
+                  </label>
+                </div>
+              </div>
+              <div class="field-box">
+                <div class="fields-group fields-group--separate">
+                  <label class="field-text">
+                    <span class="field-text__name">Начальная цена, руб</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="num" placeholder="Установите начальную цену" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__name">Блиц-цена, руб</span>
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="num" placeholder="Установите блиц-цену" id="" name="">
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <p><b>Начальная цена</b> — это минимальная цена, за которую Вы готовы продать лот в случае если будет сделана всего одна ставка</p>
+              <p><b>Блиц-цена</b> — это цена, за которую Вы готовы продать товар не дожидаясь окончания торгов. Обычно её устанавливают гораздо выше начальной цены</p>
+            </div>
+            <div class="layout-addlot__part">
+              <h2 class="layout-addlot__part-title">Продолжительность торгов</h2>
+              <div class="field-box">
+                <label class="field-select">
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select" id="" name="">
+                      <option>Установите время торгов</option>
+                      <option>Значение 1</option>
+                      <option>Значение 2</option>
+                      <option>Значение 3</option>
+                    </select>
+                  </div>
+                </label>
+              </div>
+              <h2 class="layout-addlot__part-title">Начало торгов</h2>
+              <div class="field-radio field-radio--inline">
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" id="" name="demo-radio-2" checked>
+                    <span class="field-radio__name-text">Начать незамедлительно</span>
+                  </label>
+                </div>
+                <div class="field-radio__input-wrap">
+                  <label class="field-radio__name">
+                    <input class="field-radio__input" type="radio" id="" name="demo-radio-2" checked>
+                    <span class="field-radio__name-text">Установить дату</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="layout-addlot__part">
+              <h2 class="layout-addlot__part-title">Начало торгов</h2>
+            </div>
+            <div class="layout-addlot__part">
+              <h2 class="layout-addlot__part-title">Местоположение</h2>
+              <div class="field-box">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Россия, Калининград, ул. Чапаева" id="" name="">
+                  </span>
+                </label>
+              </div>
+              <div class="field-map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A59f5163150fba18e8b7d8aa03e08e47198320b817f17959266edb1fa0cde65b5&amp;width=100%25&amp;height=280&amp;lang=ru_RU&amp;scroll=false"></script>
+              </div>
+            </div>
+            <div class="layout-addlot__part">
+              <h2 class="layout-addlot__part-title">Аукцион публикации</h2>
+              <div class="field-box">
+                <label class="field-select">
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select" id="" name="">
+                      <option>Калининград</option>
+                      <option>Значение 1</option>
+                      <option>Значение 2</option>
+                      <option>Значение 3</option>
+                    </select>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <div class="layout-addlot__part part-action">
+              <button class="btn">Опубликовать лот</button>
+              <div class="field-checkbox">
+                <label class="field-checkbox__name">
+                  <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                  <span class="field-checkbox__name-text">Я соглашаюсь с</span>
+                  <a href="#">условиями обработки данных</a>
+                </label>
+              </div>
+            </div>
+          </form>
         </div>
       </main>
 

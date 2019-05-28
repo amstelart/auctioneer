@@ -82,10 +82,12 @@
         <div class="page-header__main">
           <div class="container">
             <div class="main-header">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+        
               <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
 
               <div class="main-header__category dropdown">
-                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все&nbsp;категории</a>
                 <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
                   <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
                   <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
@@ -110,16 +112,18 @@
                   <button type="submit" class="search-form__btn"></button>
                 </form>
               </div>
+
               <div class="main-header__btn">
                 <a class="btn" href="#">Разместить лот</a>
               </div>
+
             </div>
           </div>
         </div>
         <div class="page-header__nav">
           <div class="container">
             <nav id="main-nav" class="main-nav" role="navigation">
-              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <!-- <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
               <ul class="main-nav__list">
                 <li class="main-nav__item">
                   <a href="#" class="main-nav__link">
@@ -186,9 +190,36 @@
       <main role="main" class="layout-main container">
 
         <div class="layout-main__part bb">
-          <h3>Популярное</h3>
+          <div class="popular-carousel__header">
+            <h3>Популярное</h3>
+            <div class="popular-carousel__nav"></div>
+          </div>
 
           <div class="popular-carousel owl-carousel">
+            <div class="popular-carousel__item">
+              <article class="card card--sm">
+                <div class="card__inner">
+                  <a class="card__img-wrap" href="good01">
+                    <img class="card__img" src="img/card-sm-demo-img-01.jpg" alt="Товар1">
+                  </a>
+                  <h6 class="card__title">
+                    <a href="good01">Постельное белье Сатин Алекса</a>
+                  </h6>
+                  <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                </div>
+              </article>
+              <article class="card card--sm">
+                <div class="card__inner">
+                  <a class="card__img-wrap" href="good01">
+                    <img class="card__img" src="img/card-sm-demo-img-01.jpg" alt="Товар1">
+                  </a>
+                  <h6 class="card__title">
+                    <a href="good01">Постельное белье Сатин Алекса</a>
+                  </h6>
+                  <p class="card__price">1&thinsp;600&nbsp;руб.</p>
+                </div>
+              </article>
+            </div>
             <div class="popular-carousel__item">
               <article class="card card--sm">
                 <div class="card__inner">

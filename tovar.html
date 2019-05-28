@@ -82,10 +82,12 @@
         <div class="page-header__main">
           <div class="container">
             <div class="main-header">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+        
               <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
 
               <div class="main-header__category dropdown">
-                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все категории</a>
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все&nbsp;категории</a>
                 <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
                   <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
                   <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
@@ -110,16 +112,18 @@
                   <button type="submit" class="search-form__btn"></button>
                 </form>
               </div>
+
               <div class="main-header__btn">
                 <a class="btn" href="#">Разместить лот</a>
               </div>
+
             </div>
           </div>
         </div>
         <div class="page-header__nav">
           <div class="container">
             <nav id="main-nav" class="main-nav" role="navigation">
-              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+              <!-- <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
               <ul class="main-nav__list">
                 <li class="main-nav__item">
                   <a href="#" class="main-nav__link">
@@ -255,6 +259,95 @@
                 <p><b>Адрес:</b>  г. Красноярск, ул. Транзитная 3"А", стр.2, бокс №47 (рядом с домом Мичурина 33)<p>
                 <p><b>Тел.:</b>  8 (391) 285-25-55</p>
                 <p><b>Режим работы:</b> с 10:00 до 20:00</p>
+                <div class="field-map">
+                  <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A59f5163150fba18e8b7d8aa03e08e47198320b817f17959266edb1fa0cde65b5&amp;width=100%25&amp;height=280&amp;lang=ru_RU&amp;scroll=false"></script>
+                </div>
+              </div>
+            </div>
+            <div class="layout-product__feedback">
+              <h3>Вопросы</h3>
+              <div class="product-fb">
+                <div class="product-fb__item">
+                  <div class="product-fb__question">
+                    <div class="question-card">
+                      <div class="question-card__img-wrap">
+                        <img src="img/seller-card-demo-img.jpg" alt="" class="question-card__img">
+                      </div>
+                      <div class="question-card__body">
+                        <div class="question-card__content">
+                          <h4 class="question-card__title">Денис</h4>
+                          <div class="question-card__text">
+                            <p>А есть ли торг?</p>
+                          </div>
+                        </div>
+                        <div class="question-card__date"><span>14&nbsp;дек&nbsp;в&nbsp;15:43</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-fb__answer">
+                    <div class="answer-card">
+                      <div class="answer-card__img-wrap">
+                        <img src="img/seller-card-demo-img.jpg" alt="" class="answer-card__img">
+                      </div>
+                      <div class="answer-card__body">
+                        <div class="answer-card__content">
+                          <h4 class="answer-card__title">dimonpokemon</h4>
+                          <div class="answer-card__text">
+                            <p>Торга нет</p>
+                          </div>
+                        </div>
+                        <div class="answer-card__date"><span>14&nbsp;дек&nbsp;в&nbsp;15:43</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-fb__item">
+                  <div class="product-fb__question">
+                    <div class="question-card">
+                      <div class="question-card__img-wrap">
+                        <img src="img/seller-card-demo-img.jpg" alt="" class="question-card__img">
+                      </div>
+                      <div class="question-card__body">
+                        <div class="question-card__content">
+                          <h4 class="question-card__title">Денис</h4>
+                          <div class="question-card__text">
+                            <p>А есть ли торг?</p>
+                          </div>
+                        </div>
+                        <div class="question-card__date"><span>14&nbsp;дек&nbsp;в&nbsp;15:43</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-fb__answer">
+                    <div class="answer-card">
+                      <div class="answer-card__img-wrap">
+                        <img src="img/seller-card-demo-img.jpg" alt="" class="answer-card__img">
+                      </div>
+                      <div class="answer-card__body">
+                        <div class="answer-card__content">
+                          <h4 class="answer-card__title">dimonpokemon</h4>
+                          <div class="answer-card__text">
+                            <p>Торга нет</p>
+                          </div>
+                        </div>
+                        <div class="answer-card__date"><span>14&nbsp;дек&nbsp;в&nbsp;15:43</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-fb__form-wrap">
+                  <form action="" class="product-fb__form">
+                    <div class="field-box">
+                      <h3>Задать вопрос</h3>
+                      <label class="field-text">
+                        <span class="field-text__input-wrap">
+                          <textarea name="name" rows="8" cols="80" class="field-text__input" type="text" placeholder="Введите описание товара"></textarea>
+                        </span>
+                      </label>
+                      <button class="btn">Отправить сообщение</button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
