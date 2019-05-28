@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Аукционер</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__top">
+          <div class="container">
+            <div class="top-header">
+              <ul class="top-menu">
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">О сервисе</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Доставка</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Оплата</a>
+                </li>
+                <li class="top-menu__item">
+                  <a class="top-menu__link" href="#">Помощь</a>
+                </li>
+              </ul>
+              <div class="header-services">
+                <ul class="header-services__menu">
+                  <li>
+                    <a href="#">Регистрация</a>
+                  </li>
+                  <li>
+                    <a href="#">Вход</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__main">
+          <div class="container">
+            <div class="main-header">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+        
+              <a class="main-header__logo logo" href="index.html"><img src="img/logo.svg" alt="Аукционер"></a>
+
+              <div class="main-header__category dropdown">
+                <a id="dropdown-category" href="#" class="dropdown__toggler" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Все&nbsp;категории</a>
+                <ul class="dropdown__menu  menu" aria-labelledby="dropdown-category">
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                  <li class="menu__item"><a class="menu__link" href="#">Пункт списка</a></li>
+                </ul>
+              </div>
+
+              <div class="main-header__search">
+                <form class="search-form">
+                  <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                  <label class="field-select search-form__select">
+                    <div class="field-select__select-wrap">
+                      <select class="field-select__select" id="" name="">
+                        <option>Категории поиска</option>
+                        <option>Значение 1</option>
+                        <option>Значение 2</option>
+                        <option>Значение 3</option>
+                      </select>
+                    </div>
+                  </label>
+                  <button type="submit" class="search-form__btn"></button>
+                </form>
+              </div>
+
+              <div class="main-header__btn">
+                <a class="btn" href="#">Разместить лот</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="page-header__nav">
+          <div class="container">
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <!-- <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Техника
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Одежда
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Для дома
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Автотовары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Красота
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Здоровье
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Спортивные товары
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Сад
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Скидки
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Мода
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Гараж
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+
+      <main role="main" class="layout container">
+        <div class="layout__inner chat__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Доставка</a></li>
+          </ul>
+          <h1 class="layout__title">Доставка</h1>
+          <p>
+            СДЭКом товар до 5000р мы можем отправить наложенным платежом с возможностью оплатить при получении , но стоимость товара+доставка будет на 5% выше !!!
+          </p>
+
+          <p>
+            В остальных случаях требуется 100% предоплата . (Просьба отнестись с пониманием, накрутка на товар мизерная и не хочется оплачивать еще и возврат заказа на почту, или ждать 2-3 месяца пока клиент соизволит забрать свой заказ с почты, заранее оплаченный заказ говорит о серьезном желание совершить покупку ) .При заказе просьба указывать точный почтовый ящик, после заказа вам приходит письмо с деталями оплаты.
+          </p>
+
+          <p>
+            Оплатить заказ можно на Яндекс кошелек номер 41001284656135 либо  осуществить оплатой с  любой электронной карты . Visa , MasterCard, Maestro, МИР.  Интернет-эквайринг предоставляет «АО «Тинькофф Банк».
+          </p>
+
+          <p>
+            Необходимо сделать заказ, лучше зарегистрироваться. Наш менеджер обработает ваш заказ, проверит наличие на складе и условия доставки. Далее менеджер переводит ваш заказ в состояние  “Готов к Оплате” .Вы заходите в личный кабинет на нашем сайте и оплачивайте свой заказ. Если вы не зарегистрировались , менеджер вам присылает на почтовый ящик ссылку , по которой можно оплатить заказ. Внимание !!! При оформление быстрого заказа , дальнейшая оплата картами через Интернет-эквайринг невозможна. Необходимо сделать заказ через корзину.
+          </p>
+          <div style="display:flex;flex-wrap: wrap">
+            <div style="margin-right: 30px;flex-grow: 1;">
+              <h1>Н1 Заголовок</h1>
+              <h2>Н2 Заголовок</h2>
+              <h3>Н3 Заголовок</h3>
+              <h4>Н4 Заголовок</h4>
+              <h5>Н5 Заголовок</h5>
+              <h6>Н6 Заголовок</h6>
+            </div>
+            <div style="margin-right: 30px;flex-grow: 1;">
+              <h3>Список</h3>
+              <ul class="list-unstyled">
+                <li><a href="#">Регистрация пользователя</a></li>
+                <li><a href="#">Войти с помощью соцсетей</a></li>
+                <li><a href="#">Настройка аккаунта</a></li>
+                <li><a href="#">Что такое лот</a></li>
+                <li><a href="#">Как добавить фото и видео</a></li>
+                <li><a href="#">Размещайте объявление</a></li>
+                <li><a href="#">Контакты участника аукциона</a></li>
+              </ul>
+            </div>
+            <div style="margin-right: 30px;flex-grow: 1;">
+              <ul class="list-dashed">
+                <li><span>Состояние</span><span>Новое</span></li>
+                <li><span>Ширина (см)</span><span>1900</span></li>
+                <li><span>Глубина (см)</span><span>Новое</span></li>
+                <li><span>Механизм</span><span>Книжка</span></li>
+                <li><span>Вид</span><span>Прямой</span></li>
+              </ul>
+            </div>
+          </div>
+          <a class="btn" href="#">Разместить лот</a>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__main">
+          <div class="container">
+            <div class="footer-main">
+              <div class="footer-main__lpart">
+                <a class="logo" href="#"><img src="img/logo.svg" alt="Аукционер"></a>
+              </div>
+              <div class="footer-main__rpart">
+                <div class="footer-main__box-wrap">
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Помощь</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Как купить?</a></li>
+                      <li><a href="#">Как продать</a></li>
+                      <li><a href="#">Отзыв и рейтинг</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <h5 class="footer-main__box-title">Реклама на сайте</h5>
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Баннерная реклама</a></li>
+                      <li><a href="#">Рекламные объявления</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-main__box">
+                    <ul class="footer-main__box-links">
+                      <li><a href="#">Пользовательское соглашение</a></li>
+                      <li><a href="#">Защита конфиденциальности</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="partners-pay">
+                  <h5 class="partners-pay__title">Мы работаем с</h5>
+                  <div class="partners-pay__links">
+                    <a href="#">
+                      <svg class="ps-logo" width="38" height="13"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-visa"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="35" height="21"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-master"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="73" height="26"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-qiwi"></use></svg>
+                    </a>
+                    <a href="#">
+                      <svg class="ps-logo" width="98" height="25"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#ps-logo-webmoney"></use></svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-footer__line">
+          <div class="container">
+            <div class="copyright">
+              <span>Аукционер 2018</span>
+              <span>Разработано в Showbiz</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
