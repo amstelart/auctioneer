@@ -63,7 +63,7 @@ $transition-time:             0.3s !default;
 
       &:first-child {
         flex-grow: 0;
-        
+
         #{$block-name}__link {
           padding-left: 0;
         }
@@ -92,6 +92,7 @@ $transition-time:             0.3s !default;
     &:focus {
       text-decoration: none;
       background-color: lighten($color-main, 5%);
+      color: #fff;
     }
 
     &--lvl-2 {

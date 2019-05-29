@@ -59,6 +59,43 @@
                 </li>
               </ul>
             </nav>
+            <div class="layout-category__filters">
+              <div class="filters">
+                <form action="" class="filters__inner">
+                  <div class="filters__part">
+                    <h6 class="filters__title">Цена, руб</h6>
+                    <div class="filters__price-slider">
+                      <div class="range-filter">
+                        <div class="range-filter__input-wrap">
+                          <input class="range-filter__input" type="text" id="input-with-keypress-0">
+                          <div class="range-filter__separator"></div>
+                          <input class="range-filter__input" type="text" id="input-with-keypress-1">
+                        </div>
+                        <div class="range-filter__slider">
+                          <div id="steps-slider"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__part">
+                    <h6 class="filters__title">Местополодение</h6>
+                    <label class="field-select">
+                      <div class="field-select__select-wrap">
+                        <select class="field-select__select" id="" name="">
+                          <option>Где ищем?</option>
+                          <option>Значение 1</option>
+                          <option>Значение 2</option>
+                          <option>Значение 3</option>
+                        </select>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="filters__action">
+                    <button class="btn">Показать</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
           <div class="layout-category__main">
             <ul class="breadcrumbs">
@@ -509,5 +546,6 @@
   </div>
 
   @@include('_include/page_bottom.html')
+
 </body>
 </html>

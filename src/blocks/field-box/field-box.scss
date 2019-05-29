@@ -10,6 +10,12 @@
   background-color: #d8eef9;
   padding: 20px;
 
+  .field-text {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .field-text__input {
     border-color: #bed9e6;
   }

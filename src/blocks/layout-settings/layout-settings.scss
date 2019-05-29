@@ -5,7 +5,11 @@
 .layout-settings {
 
   $block-name:                &; // #{$block-name}__element
-  
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
   &__inner {
     max-width: 752px;
   }

@@ -1,0 +1,70 @@
+// В этом файле должны быть стили для БЭМ-блока range-filter, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.range-filter {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__input-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    min-width: 100px;
+    flex-grow: 1;
+    line-height: 1.375em;
+    padding: 0.6em 1.2em;
+    font-size: inherit;
+    font-family: inherit;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+  }
+
+  &__separator {
+    width: 16px;
+    height: 1px;
+    background-color: #000000;
+    flex-shrink: 0;
+    margin: 10px 25px;
+  }
+
+  &__slider {
+
+    .noUi-target {
+      height: 2px;
+      border:none;
+      box-shadow: none;
+      background: $border-color;
+    }
+
+    .noUi-connect {
+      background: #ff8c00;
+    }
+
+    .noUi-handle {
+      width: 24px;
+      height: 24px;
+      border: solid 2px #139dfb;
+      background-color: #ffffff;
+      border-radius: 50%;
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    .noUi-horizontal .noUi-handle {
+      top: -11px;
+    }
+  }
+
+}

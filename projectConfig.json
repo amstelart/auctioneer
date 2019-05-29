@@ -109,7 +109,9 @@
     "question-card": [],
     "answer-card": [],
     "layout-deals": [],
-    "add-photo": []
+    "add-photo": [],
+    "filters": [],
+    "range-filter": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

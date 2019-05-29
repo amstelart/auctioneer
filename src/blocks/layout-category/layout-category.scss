@@ -15,6 +15,15 @@
   &__sidebar {
     @include col();
     @include col(xl, 3);
+
+    .category-checkbox {
+      margin-bottom: 25px;
+      max-width: 400px;
+    }
+
+    .category-nav {
+      margin-bottom: 25px;
+    }
   }
 
   &__main {
@@ -28,7 +37,8 @@
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 
   &__tags {
@@ -37,7 +47,9 @@
 
   &__sort {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 18px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dadada;
 
     .category-sort {
       flex-grow: 1;
@@ -57,18 +69,26 @@
 
   &__list {
     @include row;
-    border-bottom: 1px solid $border-color;
 
     .card {
       @include col();
       @include col(md, 4);
       @include col(sm, 6);
 
+      &:last-child {
+        margin-bottom: 15px;
+      }
+
       &.card--list,
       &.card--field {
         flex-basis: 100%;
         max-width: 100%;
-        border-bottom: 1px solid $border-color;
+
+        .card__inner {
+          padding-bottom: 24px;
+          margin-bottom: 0;
+          border-bottom: 1px solid $border-color;
+        }
       }
     }
 
