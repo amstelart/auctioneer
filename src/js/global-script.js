@@ -1,4 +1,4 @@
-// Если на проекте jQuery
+// Подключение и настройка библиотек
 
 $(".popular-carousel").owlCarousel({
   items: 6,
@@ -6,6 +6,7 @@ $(".popular-carousel").owlCarousel({
   loop: true,
   margin: 30,
   center: false,
+  navContainer: ".popular-carousel__nav",
   responsive : {
     0 : {
       items: 1,
@@ -14,7 +15,7 @@ $(".popular-carousel").owlCarousel({
       center: true,
     },
     480 : {
-      items: 3,
+      items: 2,
     },
     768 : {
       items: 3,
@@ -49,21 +50,3 @@ $(".category-view__control .category-view__control-icon._table").click(function 
 
     }, 300);
 });
-
-// Изоляция без jQuery
-// (function(){
-//   // code
-// }());
-
-// На проекте нет jQuery, но хочется $( document ).ready...
-// function ready(fn) {
-//   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
-//     fn();
-//   } else {
-//     document.addEventListener('DOMContentLoaded', fn);
-//   }
-// }
-//
-// ready(function(){
-//   // code
-// });

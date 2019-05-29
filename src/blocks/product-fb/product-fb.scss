@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока product-fb, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product-fb {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    border-bottom: 1px solid #dfdfdf;
+    margin-bottom: 15px;
+  }
+
+  &__question {
+    margin-bottom: 15px;
+  }
+
+  &__answer {
+
+  }
+
+  &__form-wrap {
+    margin-top: 30px;
+  }
+
+  &__form {
+
+    .field-box {
+
+      h3 {
+        margin-top: 0;
+        font-size: 21px;
+        color: #1b1e22;
+      }
+    }
+  }
+
+}

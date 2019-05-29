@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока layout-addlot, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.layout-addlot {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    max-width: 752px;
+  }
+
+  &__part {
+    border-bottom: 1px solid #dfdfdf;
+    padding-bottom: 20px;
+
+    &.part-action {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .btn {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__part-title {
+    font-size: 21px;
+  }
+}

@@ -1,0 +1,58 @@
+// В этом файле должны быть стили для БЭМ-блока add-photo, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.add-photo {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include row;
+  }
+
+  &__item {
+    @include col();
+    @include col(md, 3);
+    @include col(sm, 4);
+    @include col(xs, 6);
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    display: block;
+    border-radius: 4px;
+    background: #ebebeb;
+    height: 100px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='30px' height='30px'%3E%3Cpath fill-rule='evenodd' fill='rgb(0, 0, 0)' d='M28.828,13.828 L16.172,13.828 L16.172,1.172 C16.172,0.525 15.647,-0.000 15.000,-0.000 C14.353,-0.000 13.828,0.525 13.828,1.172 L13.828,13.828 L1.172,13.828 C0.525,13.828 -0.000,14.353 -0.000,15.000 C-0.000,15.647 0.525,16.172 1.172,16.172 L13.828,16.172 L13.828,28.828 C13.828,29.475 14.353,30.000 15.000,30.000 C15.647,30.000 16.172,29.475 16.172,28.828 L16.172,16.172 L28.828,16.172 C29.475,16.172 30.000,15.647 30.000,15.000 C30.000,14.353 29.475,13.828 28.828,13.828 Z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__img-wrap {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  &__img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  &__caption {
+    font-size: 14px;
+    color: #0c5482;
+  }
+}

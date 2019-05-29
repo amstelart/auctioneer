@@ -1,0 +1,57 @@
+// В этом файле должны быть стили для БЭМ-блока question-card, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.question-card {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+
+  &__img-wrap {
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 67px;
+    height: 67px;
+    margin-right: 20px;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    margin-top: 15px;
+  }
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: #000;
+
+    p {
+      margin-top: 0;
+    }
+  }
+
+  &__date {
+    span {
+      font-size: 13px;
+      color: #a9a9a9;
+    }
+  }
+}

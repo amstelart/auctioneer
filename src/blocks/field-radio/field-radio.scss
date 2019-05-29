@@ -63,8 +63,14 @@ $line-height:                 1.375em !default;
       left: 0;
       width: 14px;
       height: 14px;
-      border: 2px solid currentColor;
+      border: 2px solid #cacaca;
+      background: #cacaca;
       border-radius: 50%;
+
+      @at-root input:checked ~ & {
+        background: #ff8c00;
+        border-color: #ff8c00;
+      }
     }
 
     @at-root input:focus ~ &:before {
@@ -80,7 +86,7 @@ $line-height:                 1.375em !default;
       height: 6px;
       opacity: 0;
       border-radius: 50%;
-      background-color: currentColor;
+      background-color: #fff;
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {
@@ -114,5 +120,15 @@ $line-height:                 1.375em !default;
 
   &__help-text {
     @include field-help-text;
+  }
+
+  &--inline {
+    display: flex;
+    flex-wrap: wrap;
+
+    .field-radio__input-wrap {
+      margin-top: 10px;
+      margin-right: 15px;
+    }
   }
 }

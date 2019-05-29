@@ -18,6 +18,25 @@ $screen-xxl:                  1800px !default;
   $block-name:                &;
   // #{$block-name}__element
 
+  min-width: 100%;
+
+  thead {
+    text-align: left;
+
+    th {
+      padding: 0.7em 0.5em;
+    }
+  }
+
+  tbody {
+    tr {
+    }
+    td {
+      padding: 0.7em 0.5em;
+      border-bottom: 1px solid #dfdfdf;
+    }
+  }
+
   @media (max-width: ($screen-md - 1)) {
     display: block;
     border: 0;
@@ -51,6 +70,7 @@ $screen-xxl:                  1800px !default;
         width: 100%;
         border-right: 0 !important; // stylelint-disable-line  declaration-no-important
         border-left: 0 !important; // stylelint-disable-line  declaration-no-important
+        // border-bottom: none;
 
         &:before { // stylelint-disable-line  max-nesting-depth
           display: block;

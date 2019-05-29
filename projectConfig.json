@@ -100,10 +100,16 @@
     "total-lots": [],
     "layout-product": [],
     "category-checkbox": [],
-    "lots-nav": [],
+    "sidebar-nav": [],
     "popular-carousel": [],
     "card-fields": [],
-    "btn-group": []
+    "btn-group": [],
+    "layout-addlot": [],
+    "product-fb": [],
+    "question-card": [],
+    "answer-card": [],
+    "layout-deals": [],
+    "add-photo": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

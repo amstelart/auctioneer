@@ -42,6 +42,7 @@ $border-radius:               3px !default;
     text-decoration: none;
     color: $text-color;
     background-color: darken($gray-lightest, 10%);
+    background-image: linear-gradient(to bottom, #ffe534, #e68304);
     border-color: darken($gray-lighter, 12%);
   }
 

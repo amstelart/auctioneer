@@ -7,6 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   border: solid 2px #bed9e6;
+  border-bottom: none;
   display: inline-block;
   font-size: 0;
 
@@ -15,6 +16,11 @@
     border: none;
     border-radius: 0;
     background: #fff;
+    border-bottom: solid 2px #bed9e6;
+
+    &:not(:last-child) {
+      border-right: solid 2px #bed9e6;
+    }
 
     &--active,
     &:active {
@@ -23,4 +29,24 @@
     }
   }
 
+  @media (max-width: ($screen-md - 1)) {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn {
+      flex-grow: 1;
+    }
+  }
+
+  @media (max-width: ($screen-md - 100)) {
+
+    flex-direction: column;
+    
+    .btn {
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+  }
 }

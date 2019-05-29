@@ -12,6 +12,10 @@
   margin: 0;
   padding: 11px 0;
 
+  @media (max-width: ($screen-sm + 140)) {
+    display: none;
+  }
+
   &__item {
     margin-right: 30px;
   }
