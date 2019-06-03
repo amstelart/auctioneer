@@ -12,7 +12,10 @@
   <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
   <link rel="shortcut icon" href="img/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link href="css/owl.carousel.css" rel="stylesheet">
+  <link href="css/nouislider.css" rel="stylesheet">
+  <link href="css/jquery.fancybox.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" media="screen">
 
   <script>
     // Маркер работающего javascript
@@ -190,7 +193,38 @@
       <main role="main" class="layout layout-product">
         <div class="layout-product__inner">
           <div class="layout-product__photo">
-            <img src="img/product-img-01.jpg" alt="">
+            <!-- <img src="img/product-img-01.jpg" alt=""> -->
+            <div class="product-slider">
+              <div id="sync1" class="owl-carousel">
+                <a href="img/product-img-01.jpg" data-fancybox class="item">
+                  <img src="img/product-img-01.jpg" alt="landscape" />
+                </a>
+                <a href="https://static.espreso.tv/uploads/article/2442937/images/im578x383-dodge_challenger_srt_demon_8.jpeg" class="item" data-fancybox>
+                  <img src="https://static.espreso.tv/uploads/article/2442937/images/im578x383-dodge_challenger_srt_demon_8.jpeg" alt="landscape" />
+                </a>
+                <a href="https://autonewsmake.ru/wp-content/uploads/2017/03/mashiny-dlya-devushek.jpg" data-fancybox class="item">
+                  <img src="https://autonewsmake.ru/wp-content/uploads/2017/03/mashiny-dlya-devushek.jpg" />
+                </a>
+                <a href="https://www.soyuz.ru/public/uploads/files/5/7238464/1005x558_201812211515084efa4fdaef.jpg" data-fancybox class="item">
+                  <img src="https://www.soyuz.ru/public/uploads/files/5/7238464/1005x558_201812211515084efa4fdaef.jpg" alt="landscape" />
+                </a>
+              </div>
+
+              <div id="sync2" class="owl-carousel">
+                <div class="item">
+                  <img src="img/product-img-01.jpg" alt="landscape" />
+                </div>
+                <div class="item">
+                  <img src="https://static.espreso.tv/uploads/article/2442937/images/im578x383-dodge_challenger_srt_demon_8.jpeg" alt="landscape" />
+                </div>
+                <div class="item">
+                  <img src="https://autonewsmake.ru/wp-content/uploads/2017/03/mashiny-dlya-devushek.jpg" />
+                </div>
+                <div class="item">
+                  <img src="https://www.soyuz.ru/public/uploads/files/5/7238464/1005x558_201812211515084efa4fdaef.jpg" alt="landscape" />
+                </div>
+              </div>
+            </div>
           </div>
           <div class="layout-product__main">
             <ul class="breadcrumbs">
@@ -212,7 +246,7 @@
               <p><svg width="14" height="14"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#time-icon"></use></svg>&nbsp;<span>12 дней</span> до конца торгов (23.01.2018 15:43)</p>
               <p><svg width="12" height="17"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#map-icon"></use></svg>&nbsp;<span>Москва</span></p>
             </div>
-            <div class="checkout-seller">
+            <div class="checkout-seller checkout-seller--product">
               <div class="checkout-seller__inner">
                 <div class="checkout-seller__info">
                   <a href="#" class="checkout-seller__img-wrap">
@@ -423,7 +457,16 @@
     </div>
 
   </div>
-  <script src="js/script.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script src="js/isMobile.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/nouislider.js"></script>
+  <script src="js/ofi.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
