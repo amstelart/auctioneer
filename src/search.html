@@ -49,20 +49,43 @@
               </div>
             </form>
 
-            <form action="">
-              <label class="field-select">
-                <div class="field-select__name">Местоположение</div>
-                <div class="field-select__select-wrap">
-                  <select class="field-select__select" id="" name="">
-                    <option>Где ищем?</option>
-                    <option>Значение 1</option>
-                    <option>Значение 2</option>
-                    <option>Значение 3</option>
-                  </select>
-                </div>
-              </label>
-              <a href="#" class="btn">Показать</a>
-            </form>
+            <div class="layout-category__filters">
+              <div class="filters">
+                <form action="" class="filters__inner">
+                  <div class="filters__part">
+                    <h6 class="filters__title">Цена, руб</h6>
+                    <div class="filters__price-slider">
+                      <div class="range-filter">
+                        <div class="range-filter__input-wrap">
+                          <input class="range-filter__input" type="text" id="input-with-keypress-0">
+                          <div class="range-filter__separator"></div>
+                          <input class="range-filter__input" type="text" id="input-with-keypress-1">
+                        </div>
+                        <div class="range-filter__slider">
+                          <div id="steps-slider"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filters__part">
+                    <h6 class="filters__title">Местополодение</h6>
+                    <label class="field-select">
+                      <div class="field-select__select-wrap">
+                        <select class="field-select__select" id="" name="">
+                          <option>Где ищем?</option>
+                          <option>Значение 1</option>
+                          <option>Значение 2</option>
+                          <option>Значение 3</option>
+                        </select>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="filters__action">
+                    <button class="btn">Показать</button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
           <div class="layout-category__main">
             <ul class="breadcrumbs">
@@ -73,7 +96,17 @@
             <h1 class="layout-category__title">Поиск&nbsp;<span>5&nbsp;369</span></h1>
             <div class="layout-category__search">
               <form class="search-form">
-                <input class="search-form__input" type="search" placeholder="Поиск по сообщениям">
+                <input class="search-form__input" type="search" value="Шины и диски на Mazda 6" placeholder="placeholder">
+                <label class="field-select search-form__select">
+                  <div class="field-select__select-wrap">
+                    <select class="field-select__select" id="" name="">
+                      <option>Категории поиска</option>
+                      <option>Значение 1</option>
+                      <option>Значение 2</option>
+                      <option>Значение 3</option>
+                    </select>
+                  </div>
+                </label>
                 <button type="submit" class="search-form__btn"></button>
               </form>
             </div>

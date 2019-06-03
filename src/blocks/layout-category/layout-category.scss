@@ -39,6 +39,11 @@
   &__title {
     margin-top: 20px;
     margin-bottom: 15px;
+
+    span {
+      font-weight: 500;
+      color: #929292;
+    }
   }
 
   &__tags {

@@ -60,7 +60,8 @@ $border-radius:               3px !default;
     appearance: textfield;
 
     &:focus {
-      @include field-focus;
+      // @include field-focus;
+      outline: none;
     }
 
     &[disabled],

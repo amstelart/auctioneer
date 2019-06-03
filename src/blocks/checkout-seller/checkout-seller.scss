@@ -98,4 +98,10 @@
     }
   }
 
+  &--product {
+    #{$block-name}__rating {
+      margin-left: 0px;
+    }
+  }
+
 }

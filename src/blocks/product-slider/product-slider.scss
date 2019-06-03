@@ -1,0 +1,56 @@
+// В этом файле должны быть стили для БЭМ-блока product-slider, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.product-slider {
+
+  $block-name:                &; // #{$block-name}__element
+
+  margin-bottom: 20px;
+
+  #sync1 .item {
+    display: block;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%;
+    margin-bottom: 20px;
+
+    img {
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #sync2 .item {
+    background: #c9c9c9;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%;
+
+    img {
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #sync2 .current .item {
+    background: #0c83e7;
+  }
+
+}
