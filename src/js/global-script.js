@@ -22,7 +22,7 @@ $(document).ready(function() {
       animateIn: "fadeIn",
       nav: false,
       autoplayHoverPause: true,
-      autoplaySpeed: 1400, //過場速度
+      autoplaySpeed: 1400,
       dots: false,
       loop: true,
       responsiveClass: true,

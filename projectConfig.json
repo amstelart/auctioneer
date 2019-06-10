@@ -112,7 +112,8 @@
     "add-photo": [],
     "filters": [],
     "range-filter": [],
-    "product-slider": []
+    "product-slider": [],
+    "scroll-link": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -122,10 +123,8 @@
   "addCssAfter": [
     "./src/scss/print.scss"
   ],
-  "singleCompiled": [
-  ],
-  "addJsBefore": [
-  ],
+  "singleCompiled": [],
+  "addJsBefore": [],
   "addJsAfter": [
     "./src/js/global-script.js"
   ],

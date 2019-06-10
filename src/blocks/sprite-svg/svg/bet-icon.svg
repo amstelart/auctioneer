@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: silver;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Forma_1_copy_3" data-name="Forma 1 copy 3" fill-rule="evenodd"  fill="rgb(192, 192, 192)" d="M1313.1,675.4a6.5,6.5,0,0,0-2.47-1.55,3.76,3.76,0,1,0-4.26,0A6.5,6.5,0,0,0,1302,680h2.02c0-3.024,1.46-4.65,4.48-4.65s4.48,1.626,4.48,4.65H1315A6.485,6.485,0,0,0,1313.1,675.4Zm-4.6-2.219a2.211,2.211,0,0,1-2.39-2.427,2.38,2.38,0,0,1,4.76,0A2.2,2.2,0,0,1,1308.5,673.185Z" transform="translate(-1302 -667)"/>
+</svg>
