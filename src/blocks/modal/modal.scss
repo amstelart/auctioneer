@@ -152,13 +152,34 @@ $z-index-modal:               100 !default;
 
     #{$block-name}__body {
       form {
-        .fields-group {
+        .fields-group-bets {
           margin: 20px auto;
-          max-width: 380px;
+          max-width: 400px;
+          display: flex;
+
+          @media (max-width: $screen-sm) {
+            flex-direction: column;
+          }
+
+          .field-text {
+            flex-grow: 1;
+          }
 
           .field-text__input {
             border-color: #bed9e6;
             padding: 0.65em 1.2em;
+          }
+
+          .field-actions {
+            margin-top: 0;
+
+            @media (max-width: $screen-sm) {
+              flex-grow: 1;
+
+              .btn {
+                min-width: 100%;
+              }
+            }
           }
         }
       }
