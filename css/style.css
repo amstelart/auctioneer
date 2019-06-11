@@ -329,12 +329,12 @@ ul.list-dashed li span:last-child {
 a.btn--disabled {
       pointer-events: none; }
 .temp-icon-left-arrow {
-  background-image: url(../img/sprite-09992790555696311.png);
+  background-image: url(../img/sprite-010000680343607815.png);
   background-position: 0px 0px;
   width: 32px;
   height: 32px; }
 .temp-icon-right-arrow {
-  background-image: url(../img/sprite-09992790555696311.png);
+  background-image: url(../img/sprite-010000680343607815.png);
   background-position: -36px 0px;
   width: 32px;
   height: 32px; }
@@ -1788,6 +1788,11 @@ a.pagination__item:hover, a.pagination__item:focus {
       -webkit-box-flex: 1;
           -ms-flex-positive: 1;
               flex-grow: 1; }
+.copyright span a {
+      color: #8f9395;
+      text-decoration: none; }
+.copyright span a:hover {
+        text-decoration: underline; }
 .footer-main {
   padding: 35px 0;
   display: -webkit-box;
