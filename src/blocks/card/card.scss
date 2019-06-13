@@ -36,6 +36,19 @@
     flex-shrink: 0;
     display: block;
     margin-bottom: 20px;
+
+    overflow: hidden;
+
+    img {
+      transform: scale(1);
+      transition: all $transition-time;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
   }
 
   &__img {
@@ -124,6 +137,22 @@
   }
 
   &--sm {
+
+    // #{$block-name}__img-wrap {
+    //   overflow: hidden;
+    //
+    //   img {
+    //     transform: scale(1);
+    //     transition: all $transition-time;
+    //   }
+    //
+    //   &:hover {
+    //     img {
+    //       transform: scale(1.1);
+    //     }
+    //   }
+    // }
+
     min-width: 164px;
     flex-basis: 194px;
 

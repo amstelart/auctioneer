@@ -18,6 +18,15 @@
     &:first-child {
       flex-grow: 1;
     }
+
+    a {
+      color: #8f9395;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
 }
