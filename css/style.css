@@ -329,12 +329,12 @@ ul.list-dashed li span:last-child {
 a.btn--disabled {
       pointer-events: none; }
 .temp-icon-left-arrow {
-  background-image: url(../img/sprite-010000680343607815.png);
+  background-image: url(../img/sprite-06324721111293672.png);
   background-position: 0px 0px;
   width: 32px;
   height: 32px; }
 .temp-icon-right-arrow {
-  background-image: url(../img/sprite-010000680343607815.png);
+  background-image: url(../img/sprite-06324721111293672.png);
   background-position: -36px 0px;
   width: 32px;
   height: 32px; }
@@ -1920,7 +1920,16 @@ a.pagination__item:hover, a.pagination__item:focus {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     display: block;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    overflow: hidden; }
+.card__img-wrap img {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+.card__img-wrap:hover img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
 .card__img {
     display: block;
     border-radius: 2px; }
@@ -2316,6 +2325,8 @@ input:checked ~ .card--field__name-text:after {
 .seller-card__title a {
       color: #000;
       text-decoration: none; }
+.seller-card__title a:hover {
+        color: #0c5482; }
 .seller-card__stat {
     display: inline-block;
     margin-right: 10px;
