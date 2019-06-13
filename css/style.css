@@ -329,12 +329,12 @@ ul.list-dashed li span:last-child {
 a.btn--disabled {
       pointer-events: none; }
 .temp-icon-left-arrow {
-  background-image: url(../img/sprite-06324721111293672.png);
+  background-image: url(../img/sprite-05553898792390342.png);
   background-position: 0px 0px;
   width: 32px;
   height: 32px; }
 .temp-icon-right-arrow {
-  background-image: url(../img/sprite-06324721111293672.png);
+  background-image: url(../img/sprite-05553898792390342.png);
   background-position: -36px 0px;
   width: 32px;
   height: 32px; }
@@ -2243,7 +2243,17 @@ input:checked ~ .card--field__name-text:after {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     display: block;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden; }
+.c-card__img-wrap img {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+.c-card__img-wrap:hover img {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
 .c-card__img {
     display: block;
     border-radius: 50%; }
